@@ -1,0 +1,27 @@
+{
+  "students": [
+    { "id": 1, "fullName": "Carlos Gómez", "email": "carlos@music.com", "instrumentId": 1, "teacherId": 1, "active": true },
+    { "id": 2, "fullName": "María Rodríguez", "email": "maria@music.com", "instrumentId": 2, "teacherId": 2, "active": true },
+    { "id": 3, "fullName": "Andrés López", "email": "andres@music.com", "instrumentId": 3, "teacherId": 1, "active": false }
+  ],
+  "teachers": [
+    { "id": 1, "fullName": "Prof. Roberto Arenas", "specialty": "Piano y Percusión", "email": "roberto@escuela.com" },
+    { "id": 2, "fullName": "Mtra. Beatriz Salazar", "specialty": "Guitarra", "email": "beatriz@escuela.com" }
+  ],
+  "lessons": [
+    { "id": 1, "studentId": 1, "teacherId": 1, "schedule": "Lunes 10:00 AM", "room": "Aula 101" },
+    { "id": 2, "studentId": 2, "teacherId": 2, "schedule": "Miércoles 03:00 PM", "room": "Aula 202" }
+  ],
+  "instruments": [
+    { "id": 1, "name": "Piano Vertical Standard", "category": "keyboard", "stock": 4, "monthlyFee": 85.0 },
+    { "id": 2, "name": "Guitarra Clásica Studio", "category": "strings", "stock": 10, "monthlyFee": 45.0 },
+    { "id": 3, "name": "Batería Acústica Pro", "category": "percussion", "stock": 0, "monthlyFee": 95.0 },
+    { "id": 4, "name": "Violín 4/4 Concert", "category": "strings", "stock": 5, "monthlyFee": 60.0 },
+    { "id": 5, "name": "Flauta Traversa", "category": "wind", "stock": 3, "monthlyFee": 40.0 },
+    { "id": 6, "name": "Sintetizador Digital", "category": "keyboard", "stock": 0, "monthlyFee": 110.0 },
+    { "id": 7, "name": "Saxo Alto EB", "category": "wind", "stock": 2, "monthlyFee": 80.0 },
+    { "id": 8, "name": "Cajón Peruano", "category": "percussion", "stock": 6, "monthlyFee": 30.0 },
+    { "id": 9, "name": "Bajo Eléctrico 4C", "category": "strings", "stock": 4, "monthlyFee": 55.0 },
+    { "id": 10, "name": "Organo de Tubos Mini", "category": "keyboard", "stock": 1, "monthlyFee": 150.0 }
+  ]
+}
