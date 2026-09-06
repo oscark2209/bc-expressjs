@@ -1,0 +1,33 @@
+{
+  "name": "music-school-api",
+  "version": "1.0.0",
+  "description": "REST API for Music School Students management using Express 5 and TypeScript",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.25.0",
+      "onFail": "download"
+    }
+  },
+  "dependencies": {
+    "express": "^5.0.1",
+    "morgan": "^1.10.0",
+    "winston": "^3.17.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.13.5",
+    "@types/winston": "^2.4.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
