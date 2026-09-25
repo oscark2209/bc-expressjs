@@ -1,0 +1,27 @@
+# Dependencias
+node_modules/
+
+# Entorno y credenciales (¡Muy importante para no filtrar contraseñas!)
+.env
+.env.local
+.env.*.local
+
+# Compilación y producción de TypeScript
+dist/
+build/
+
+# Logs y bases de datos locales (si aplica)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+*.sqlite
+*.sqlite-journal
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# VS Code (opcional, por si quieres mantener tus configuraciones locales privadas)
+.vscode/
