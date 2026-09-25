@@ -78,20 +78,20 @@ La aplicación implementa un middleware centralizado que captura excepciones y r
 
 ### 2. Consultas (GET)
 * **Listado de Profesores:**
-![Get Teachers](./assets/get%20teachers.png)
+![Get Teachers](../assets/get%20teachers.png)
 
 * **Listado de Instrumentos:**
-![Get Instrument](./assets/get%20instrument.png)
+![Get Instrument](../assets/get%20instrument.png)
 
 * **Consulta por ID:**
-![Get By ID](./assets/get%20by%20id.png)
+![Get By ID](../assets/get%20by%20id.png)
 
 ### 3. Operaciones de Creación y Modificación
 * **Creación de Registros (POST):**
-![Post](./assets/post.png)
+![Post](../assets/post.png)
 
 * **Actualización de Registros (PUT):**
-![Put](./assets/put.png)
+![Put](../assets/put.png)
 
 ### 4. Eliminación de Registros (DELETE)
-![Delete](./assets/delete.png)
+![Delete](../assets/delete.png)
