@@ -74,24 +74,24 @@ La aplicación implementa un middleware centralizado que captura excepciones y r
 ## 📸 Evidencias y Capturas del Sistema
 
 ### 1. Inicialización de Datos (Seed)
-![Pnpm Seed](./assets/pnpm%20seed.png)
+![Pnpm Seed](./week-06-mongodb_mongoose/assets/pnpm%20seed.png)
 
 ### 2. Consultas (GET)
 * **Listado de Profesores:**
-![Get Teachers](./assets/get%20teachers.png)
+![Get Teachers](./week-06-mongodb_mongoose/assets/get%20teachers.png)
 
 * **Listado de Instrumentos:**
-![Get Instrument](./assets/get%20instrument.png)
+![Get Instrument](./week-06-mongodb_mongoose/assets/get%20instrument.png)
 
 * **Consulta por ID:**
-![Get By ID](./assets/get%20by%20id.png)
+![Get By ID](./week-06-mongodb_mongoose/assets/get%20by%20id.png)
 
 ### 3. Operaciones de Creación y Modificación
 * **Creación de Registros (POST):**
-![Post](./assets/post.png)
+![Post](./week-06-mongodb_mongoose/assets/post.png)
 
 * **Actualización de Registros (PUT):**
-![Put](./assets/put.png)
+![Put](./week-06-mongodb_mongoose/assets/put.png)
 
 ### 4. Eliminación de Registros (DELETE)
-![Delete](./assets/delete.png)
+![Delete](./week-06-mongodb_mongoose/assets/delete.png)
