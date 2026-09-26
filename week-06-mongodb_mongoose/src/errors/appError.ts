@@ -1,14 +1,14 @@
 export class AppError extends Error {
-  public readonly statusCode: number;
-  public readonly isOperational: boolean;
+  statusCode: number;
+  status: string;
+  isOperational: boolean;
 
-  constructor(statusCode: number, message: string) {
+  constructor(message: string, statusCode: number) {
     super(message);
     this.statusCode = statusCode;
+    this.status = `${statusCode}`.startsWith('4') ? 'fail' : 'error';
     this.isOperational = true;
-    this.name = 'AppError';
 
-    
-    Object.setPrototypeOf(this, new.target.prototype);
+    Error.captureStackTrace(this, this.constructor);
   }
 }

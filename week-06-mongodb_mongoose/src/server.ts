@@ -1,4 +1,8 @@
-import 'dotenv/config';
+import dotenv from 'dotenv';
+
+dotenv.config();
+dotenv.config({ path: 'src/.env' });
+
 import { app } from './app';
 import { connectDB } from './lib/mongoose';
 

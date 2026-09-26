@@ -23,8 +23,8 @@ export async function getById(req: Request, res: Response, next: NextFunction): 
 
 export async function create(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
-    const validatedData = createInstrumentSchema.parse(req.body);
-    const newItem = await service.createSecondary(validatedData);
+    const validatedData = createInstrumentSchema.shape.body.parse(req.body);
+    const newItem = await service.createSecondary(validatedData, req.user!.userId);
     res.status(201).json(newItem);
   } catch (err) {
     next(err);
@@ -34,7 +34,7 @@ export async function create(req: Request, res: Response, next: NextFunction): P
 export async function update(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const id = Array.isArray(req.params.id) ? req.params.id[0] : req.params.id;
-    const validatedData = updateInstrumentSchema.parse(req.body);
+    const validatedData = updateInstrumentSchema.shape.body.parse(req.body);
     const updated = await service.updateSecondary(id, validatedData);
     res.json(updated);
   } catch (err) {

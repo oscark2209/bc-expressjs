@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { AppError } from '../errors/appError';
 
 export function errorHandler(
-  err: any,
+  err: unknown,
   _req: Request,
   res: Response,
   _next: NextFunction
@@ -17,17 +17,27 @@ export function errorHandler(
   }
 
   // Errores de validación de Zod
-  if (err.name === 'ZodError') {
+  if (err instanceof Error && err.name === 'ZodError') {
     res.status(400).json({
       status: 'error',
       message: 'Error de validación en los datos enviados',
-      errors: err.errors,
+      errors: 'issues' in err ? err.issues : undefined,
     });
     return;
   }
 
+  if (err instanceof Error && err.name === 'CastError') {
+    res.status(400).json({ status: 'error', message: 'ID inválido' });
+    return;
+  }
+
+  if (typeof err === 'object' && err !== null && 'code' in err && err.code === 11000) {
+    res.status(409).json({ status: 'error', message: 'El registro ya existe' });
+    return;
+  }
+
   // Error genérico del servidor (500)
-  console.error('ERROR NO CONTROLADO 💥:', err);
+  console.error('ERROR NO CONTROLADO:', err);
   res.status(500).json({
     status: 'error',
     message: 'Error interno del servidor',
